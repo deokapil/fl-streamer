@@ -2,7 +2,7 @@
 Run Flask's bundled web server
 
 """
-from app import create_app
+from stapp import create_app
 
 application = create_app()
 application.run(debug=True)
