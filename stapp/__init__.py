@@ -8,6 +8,6 @@ from stapp.celstreamer import views as celstream_view
 def create_app() -> Flask:
     app = Flask(__name__)
     FlaskDynaconf(app, settings_files=["settings.toml", ".secrets.toml"])
-    print(app.config["CELERY"])
     app.register_blueprint(celstream_view.bp)
+    celery_init_app(app)
     return app

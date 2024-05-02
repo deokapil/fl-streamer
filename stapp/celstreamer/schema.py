@@ -1,7 +1,5 @@
 from typing import Literal, Optional
 
-import boto3
-import botocore
 from pydantic import BaseModel
 from datetime import datetime
 

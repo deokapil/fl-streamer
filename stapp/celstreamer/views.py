@@ -27,11 +27,9 @@ def stream_control():
     """Index view"""
 
     json_data = request.get_json()
-    pprint(json_data)
     try:
         control = StreamSchema(**json_data)
-        pprint(control)
-
+        stream_task.delay(control.dict())
     except ValidationError as err:
         print(err)
         return jsonify({"messages": "data invalid"}), 422
