@@ -1,0 +1,10 @@
+[default]
+
+video_bucket = "mayhem-vid-2023"
+s3_region = "eu-north-1"
+rtmp_uri = "rtmp://localhost/live"
+
+mayhem_server = "http://localhost:3000"
+
+celery__broker_url = "redis://localhost:6379/0"
+celery__result_backend = "redis://localhost:6379/0"
